@@ -1,0 +1,34 @@
+{
+  "name": "@stdlib/complex-imagf",
+  "version": "0.0.0",
+  "description": "Return the imaginary component of a single-precision complex floating-point number.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./mod.js",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/complex-imagf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdmath",
+    "mathematics",
+    "math",
+    "complex",
+    "cmplx",
+    "real",
+    "re",
+    "imaginary",
+    "imag",
+    "im",
+    "number"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
