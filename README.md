@@ -233,6 +233,14 @@ int main( void ) {
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/complex-imag`][@stdlib/complex/imag]</span><span class="delimiter">: </span><span class="description">return the imaginary component of a double-precision complex floating-point number.</span>
+-   <span class="package-name">[`@stdlib/complex-realf`][@stdlib/complex/realf]</span><span class="delimiter">: </span><span class="description">return the real component of a single-precision complex floating-point number.</span>
+-   <span class="package-name">[`@stdlib/complex-reimf`][@stdlib/complex/reimf]</span><span class="delimiter">: </span><span class="description">return the real and imaginary components of a single-precision complex floating-point number.</span>
+
 </section>
 
 <!-- /.related -->
@@ -305,6 +313,16 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [branches-url]: https://github.com/stdlib-js/complex-imagf/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/complex-imagf/main/LICENSE
+
+<!-- <related-links> -->
+
+[@stdlib/complex/imag]: https://github.com/stdlib-js/complex-imag
+
+[@stdlib/complex/realf]: https://github.com/stdlib-js/complex-realf
+
+[@stdlib/complex/reimf]: https://github.com/stdlib-js/complex-reimf
+
+<!-- </related-links> -->
 
 </section>
 
