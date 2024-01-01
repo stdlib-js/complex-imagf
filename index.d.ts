@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2021 The Stdlib Authors.
@@ -16,25 +16,29 @@
 * limitations under the License.
 */
 
-#ifndef STDLIB_COMPLEX_IMAGF_H
-#define STDLIB_COMPLEX_IMAGF_H
+// TypeScript Version: 4.1
 
-#include "stdlib/complex/float32.h"
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-/*
-* If C++, prevent name mangling so that the compiler emits a binary file having undecorated names, thus mirroring the behavior of a C compiler.
-*/
-#ifdef __cplusplus
-extern "C" {
-#endif
+import { Complex64 } from '@stdlib/types/complex';
 
 /**
 * Returns the imaginary component of a single-precision complex floating-point number.
+*
+* @param z - complex number
+* @returns imaginary component
+*
+* @example
+* var Complex64 = require( `@stdlib/complex/float32` );
+*
+* var z = new Complex64( 5.0, 3.0 );
+*
+* var im = imagf( z );
+* // returns 3.0
 */
-float stdlib_imagf( const stdlib_complex64_t z );
+declare function imagf( z: Complex64 ): number;
 
-#ifdef __cplusplus
-}
-#endif
 
-#endif // !STDLIB_COMPLEX_IMAGF_H
+// EXPORTS //
+
+export = imagf;
