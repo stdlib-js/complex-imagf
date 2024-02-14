@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import imagf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-imagf@deno/mod.js';
+import imagf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-imagf@v0.2.0-deno/mod.js';
 ```
 
 #### imagf( z )
@@ -91,7 +91,7 @@ var im = imagf( z );
 import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32@deno/mod.js';
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
 import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@deno/mod.js';
-import imagf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-imagf@deno/mod.js';
+import imagf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-imagf@v0.2.0-deno/mod.js';
 
 var re;
 var im;
