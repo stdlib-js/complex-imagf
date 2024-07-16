@@ -39,7 +39,7 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/complex-float32": "^0.2.1",
+    "@stdlib/complex-float32-ctor": "^0.0.1",
     "@stdlib/types": "^0.3.2",
     "@stdlib/utils-library-manifest": "^0.2.1"
   },
