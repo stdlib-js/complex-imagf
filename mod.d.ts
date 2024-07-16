@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2021 The Stdlib Authors.
@@ -16,20 +16,29 @@
 * limitations under the License.
 */
 
-#include "stdlib/complex/imagf.h"
-#include "stdlib/complex/float32/ctor.h"
-#include <stdio.h>
+// TypeScript Version: 4.1
 
-int main( void ) {
-	const stdlib_complex64_t x[] = {
-		stdlib_complex64( 5.0f, 2.0f ),
-		stdlib_complex64( -2.0f, 1.0f ),
-		stdlib_complex64( 0.0f, -0.0f ),
-		stdlib_complex64( 0.0f/0.0f, 0.0f/0.0f )
-	};
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-	int i;
-	for ( i = 0; i < 4; i++ ) {
-		printf( "imagf(v) = %f\n", stdlib_imagf( x[ i ] ) );
-	}
-}
+import { Complex64 } from '@stdlib/types/complex';
+
+/**
+* Returns the imaginary component of a single-precision complex floating-point number.
+*
+* @param z - complex number
+* @returns imaginary component
+*
+* @example
+* var Complex64 = require( '@stdlib/complex-float32-ctor' );
+*
+* var z = new Complex64( 5.0, 3.0 );
+*
+* var im = imagf( z );
+* // returns 3.0
+*/
+declare function imagf( z: Complex64 ): number;
+
+
+// EXPORTS //
+
+export = imagf;
