@@ -45,32 +45,38 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/complex-imagf
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var imagf = require( '@stdlib/complex-imagf' );
+imagf = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-imagf@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var imagf = require( 'path/to/vendor/umd/complex-imagf/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-imagf@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.imagf;
+})();
+</script>
 ```
 
 #### imagf( z )
@@ -105,11 +111,16 @@ var im = imagf( z );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var Complex64 = require( '@stdlib/complex-float32-ctor' );
-var randu = require( '@stdlib/random-base-randu' );
-var round = require( '@stdlib/math-base-special-round' );
-var imagf = require( '@stdlib/complex-imagf' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-ctor@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-imagf@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 var re;
 var im;
@@ -122,6 +133,11 @@ for ( i = 0; i < 100; i++ ) {
     z = new Complex64( re, im );
     console.log( 'imagf(%s) = %d', z.toString(), imagf( z ) );
 }
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -130,98 +146,7 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/complex/imagf.h"
-```
-
-#### stdlib_imagf( z )
-
-Returns the imaginary component of a single-precision complex floating-point number.
-
-```c
-#include "stdlib/complex/float32/ctor.h"
-
-stdlib_complex64_t z = stdlib_complex64( 5.0f, 2.0f );
-
-// ...
-
-float im = stdlib_imagf( z );
-// returns 2.0f
-```
-
-The function accepts the following arguments:
-
--   **z**: `[in] stdlib_complex64_t` single-precision complex floating-point number.
-
-```c
-float stdlib_imagf( const stdlib_complex64_t z );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/complex/imagf.h"
-#include "stdlib/complex/float32/ctor.h"
-#include <stdio.h>
-
-int main( void ) {
-    const stdlib_complex64_t x[] = {
-        stdlib_complex64( 5.0f, 2.0f ),
-        stdlib_complex64( -2.0f, 1.0f ),
-        stdlib_complex64( 0.0f, -0.0f ),
-        stdlib_complex64( 0.0f/0.0f, 0.0f/0.0f )
-    };
-
-    int i;
-    for ( i = 0; i < 4; i++ ) {
-        printf( "imagf(v) = %f\n", stdlib_imagf( x[ i ] ) );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -321,11 +246,11 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/complex/imag]: https://github.com/stdlib-js/complex-imag
+[@stdlib/complex/imag]: https://github.com/stdlib-js/complex-imag/tree/umd
 
-[@stdlib/complex/realf]: https://github.com/stdlib-js/complex-realf
+[@stdlib/complex/realf]: https://github.com/stdlib-js/complex-realf/tree/umd
 
-[@stdlib/complex/float32/reim]: https://github.com/stdlib-js/complex-float32-reim
+[@stdlib/complex/float32/reim]: https://github.com/stdlib-js/complex-float32-reim/tree/umd
 
 <!-- </related-links> -->
 
